@@ -26,6 +26,12 @@ app.get("/creators", async (req, res) => {
   }
 });
 
+/**
+ * Retrieves data using the provided leagues.
+ *
+ * @param {Array} leagues - The leagues for which to retrieve data.
+ * @return {Promise} A promise that resolves with the retrieved data.
+ */
 async function getData(leagues) {
   return await scrapers.scrapeData(leagues);
 }
@@ -35,7 +41,7 @@ app.post("/creators", async (req, res) => {
   let leagues = await JSON.parse(rawdata);
 
   getData(leagues).then((data) => {
-    writeFile(path, JSON.stringify(data), { flag: "a+" }, (error) => {
+    writeFile(pathResults, JSON.stringify(data), { flag: "a+" }, (error) => {
       if (error) {
         console.log("An error has occurred ", error);
         return;
@@ -44,7 +50,7 @@ app.post("/creators", async (req, res) => {
     });
   });
 
-  writeFile(path, "", (error) => {
+  writeFile(pathResults, "", (error) => {
     if (error) {
       console.log("An error has occurred ", error);
       return;
