@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite bet</title>
+
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  </head>
+  <body>
+    <h1>Infinite bet</h1>
+
+    <div class="form">
+      <div class="form__head">
+        <div class="form__actions">
+          <ul>
+            <li>
+              <button class="btn" onclick="submitChannel()">
+                Update Results
+              </button>
+
+              <button
+                class="btn btn--hidden js-split-btn"
+                onclick="homeResults()">
+                Home
+              </button>
+            </li>
+
+            <li>
+              <button class="btn btn--alt" onclick="loadCreators()">
+                Show/Reset Results
+              </button>
+
+              <button
+                class="btn btn--alt btn--hidden js-split-btn"
+                onclick="awayResults()">
+                Away
+              </button>
+            </li>
+          </ul>
+        </div>
+        <!-- /.form__actions -->
+
+        <div>
+          <div class="form__col">
+            <label for="rounds" class="form__label hidden"
+              >Last N matches</label
+            >
+
+            <div class="form__controls">
+              <input
+                type="number"
+                class="field js-matches-number"
+                name="rounds"
+                id="rounds"
+                value=""
+                placeholder="Last N matches" />
+            </div>
+            <!-- /.form__controls -->
+          </div>
+          <!-- /.form__col -->
+        </div>
+        <!-- /.form__row -->
+      </div>
+      <!-- /.form__head -->
+    </div>
+    <!-- /.form -->
+
+    <div class="container"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts.js" type="text/javascript"></script>
+  </body>
+</html>

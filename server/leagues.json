@@ -1,0 +1,13 @@
+[
+  {
+    "league": "Premier League",
+    "fixtures": "https://www.flashscore.com/football/england/premier-league/fixtures/",
+    "url": "https://www.flashscore.com/football/england/premier-league/standings/#/I3O5jpB2/table/overall"
+  },
+
+  {
+    "league": "La Liga",
+    "fixtures": "https://www.flashscore.com/football/spain/laliga/fixtures/",
+    "url": "https://www.flashscore.com/football/spain/laliga/standings/#/SbZJTabs/table/overall"
+  }
+]
